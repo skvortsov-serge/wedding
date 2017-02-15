@@ -1,0 +1,500 @@
+@import 'bootstrap';
+@import 'media';
+$page-color: #114da2;
+@font-face {
+    font-family: CaviarDreams_BoldItalic;
+    src: url('../fonts/CaviarDreams_BoldItalic.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: CaviarDreams;
+    src: url('../fonts/CaviarDreams.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: CaviarDreams_Bold;
+    src: url('../fonts/CaviarDreams_Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-image: url("../img/background.png");
+    font-family: CaviarDreams, sans-serif;
+}
+
+.wrapper {
+    max-width: 1260px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+header {
+    padding: 10px 70px 40px;
+    background-color: #FFF;
+    border-bottom: 1px solid $page-color;
+    box-shadow: 0px 4px 19px -2px rgba(0, 0, 0, 0.77);
+    z-index: 10;
+}
+
+.header-width {
+    width: 1120px;
+}
+
+.main-logo a {
+    display: block;
+    img {
+        height: 240px;
+        width: 90px;
+    }
+}
+
+.top-menu {
+    margin-top: 74px;
+    h1 {
+        font-size: 34px;
+        font-family: CaviarDreams, sans-serif;
+        letter-spacing: 0.7px;
+        font-weight: lighter;
+        margin: 50px 0 30px 40px;
+    }
+    p {
+        color: $page-color;
+        margin-left: 40px;
+        font-size: 18px;
+        font-family: CaviarDreams, sans-serif;
+    }
+    .t-menu {
+        margin-top: 30px;
+        ul li {
+            display: inline-block;
+            padding-right: 40px;
+            font-family: CaviarDreams, sans-serif;
+            &:last-child {
+                padding-right: 0;
+            }
+            a {
+                color: dimgrey;
+                &:hover {
+                    color: $page-color;
+                }
+            }
+        }
+    }
+}
+
+.phone-number {
+    font-size: 22px;
+    font-family: CaviarDreams_Bold, sans-serif;
+    font-weight: bolder;
+    letter-spacing: -0.9px;
+}
+
+.button-call button {
+    width: 200px;
+    height: 30px;
+    font-size: 14px;
+    border: 1px solid #010925;
+    border-radius: 20px;
+    font-weight: normal;
+    background-color: transparent;
+    text-align: center;
+    &:hover {
+        color: $page-color;
+        border-color: $page-color;
+    }
+}
+
+.phone-number,
+.button-call {
+    margin-bottom: 12px;
+}
+
+.vk-icon,
+.facebook-icon,
+.instagram-icon {
+    a {
+        display: block;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.vk-icon a {
+    background: url('../img/header/sprite-icon.png') 0px -35px no-repeat transparent;
+    &:hover {
+        background-position: 0px -71px;
+    }
+}
+
+.facebook-icon a {
+    background: url('../img/header/sprite-icon.png') -36px -35px no-repeat transparent;
+    &:hover {
+        background-position: -36px -71px;
+    }
+}
+
+.instagram-icon a {
+    background: url('../img/header/sprite-icon.png') -72px -35px no-repeat transparent;
+    &:hover {
+        background-position: -72px -71px;
+    }
+}
+
+.soc-icons {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.top-contacts {
+    margin-top: 70px;
+    text-align: right;
+}
+
+// -------------------mobile menu----------------
+.mobile-menu {
+    ul {
+        padding-left: 0;
+        margin-bottom: 0;
+        li {
+            list-style-type: none;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 20px;
+            font-family: CaviarDreams, sans-serif;
+            border-bottom: 1px dashed white;
+            color: white;
+            &:hover {
+                background-color: #1c6ad8;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.soc-mobile {
+    text-align: center;
+    margin-top: 0;
+    width: 280px;
+}
+
+.contact-icons {
+    // margin-left: 35px;
+}
+
+.navbar-toggle {
+    border: 1px solid black;
+    border-radius: 4px;
+    .icon-bar {
+        background-color: #000;
+    }
+}
+
+.toggle-menu {
+    background-color: rgba(17, 77, 162, 0.9);
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    top: -9999px;
+    transition: top 0.25s;
+}
+
+.active-menu {
+    top: 50px;
+}
+
+.navbar-header {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 4;
+    border-bottom: 2px solid white;
+    background-color: rgba(17, 77, 162, 0.9);
+    box-shadow: 0px 3px 20px -10px rgba(0, 0, 0, 0.89);
+}
+
+// ------------------------------------------------------------------
+section {
+    height: auto;
+    display: block;
+    &:hover h2 {
+        color: #000;
+        transition: all .6s ease;
+    }
+    &:hover .background {
+        opacity: 0;
+        transition: all .6s ease;
+    }
+    // &:hover .round {
+    //     background: url("../img/services/1sw.png") center center no-repeat;
+    //     background-size: cover;
+    //     transition: all .6s ease;
+    // }
+    // &:hover .round2 {
+    //     background: url("../img/services/2sw.png") center center no-repeat;
+    //     background-size: cover;
+    //     transition: all .6s ease;
+    // }
+    // &:hover .round3 {
+    //     background: url("../img/services/3sw.png") center center no-repeat;
+    //     background-size: cover;
+    //     transition: all .6s ease;
+    // }
+    // &:hover .round4 {
+    //     background: url("../img/services/4sw.png") center center no-repeat;
+    //     background-size: cover;
+    //     transition: all .6s ease;
+    // }
+    // &:hover .round5 {
+    //     background: url("../img/services/5sw.png") center center no-repeat;
+    //     background-size: cover;
+    //     transition: all .6s ease;
+    // }
+    &:hover .s-info {
+        // background-color: #1c6ad8;
+        background-color: #f7f6f6;
+        transition: all .6s ease;
+    }
+}
+
+.w-services {
+    height: auto;
+    position: relative;
+    border-bottom: 1px solid #fff;
+}
+
+.section-width {
+    width: 100%;
+}
+
+.no-padding {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.s-photo {
+    width: 100%;
+    height: 150px;
+    background: url("../img/services/wed_cer2.jpg") 0px -60px no-repeat;
+    background-size: cover;
+}
+
+.s-photo2 {
+    background: url("../img/services/2s.jpg") top left no-repeat;
+    background-size: cover;
+}
+
+.s-photo3 {
+    background: url("../img/services/pred ryki.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+.s-photo4 {
+    background: url("../img/services/4s.jpg") top left no-repeat;
+    background-size: cover;
+}
+
+.s-photo5 {
+    background: url("../img/services/5s.jpg") top left no-repeat;
+    background-size: cover;
+}
+
+.s-info {
+    // background-color: $page-color;
+    background-color: #ccc;
+    height: 150px;
+    h2 {
+        color: #000;
+        font-size: 28px;
+        font-family: CaviarDreams, sans-serif;
+        margin: 0;
+        box-sizing: border-box;
+        padding: 55px 0 55px 80px;
+        transition: all .6s ease;
+    }
+}
+
+.round {
+    width: 113px;
+    height: 114px;
+    background: url("../img/services/1sb.png") center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    margin-top: -57px;
+    left: 50%;
+    margin-left: -56px;
+    z-index: 2;
+    transition: all .6s ease;
+}
+
+.round2 {
+    background: url("../img/services/2sb.png") center center no-repeat;
+    background-size: cover;
+}
+
+.round3 {
+    background: url("../img/services/3sb.png") center center no-repeat;
+    background-size: cover;
+}
+
+.round4 {
+    background: url("../img/services/4sb.png") center center no-repeat;
+    background-size: cover;
+}
+
+.round5 {
+    background: url("../img/services/5sb.png") center center no-repeat;
+    background-size: cover;
+}
+
+.background {
+    position: absolute;
+    width: 50%;
+    height: 150px;
+    top: 0;
+    left: 0;
+    // background-color: rgba(17, 77, 162, 0.78);
+    background-color: rgba(255, 255, 255, 0.78);
+    transition: all .6s ease;
+}
+
+// -------------------Section About Me-----------------
+.about-me {
+    padding: 8rem;
+    background-color: #FFF;
+    background-attachment: fixed;
+    background-size: initial;
+    color: #fff;
+    z-index: -1;
+    position: relative;
+    border-bottom: 1px solid #fff;
+    .parallax-bg {
+        background: url("../img/bg-am-exp.jpg") no-repeat;
+        // background-position: -1650px -1200px;
+        background-position: -325px -800px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+
+.text-am {
+    height: 300px;
+    h3 {
+        font-size: 38px;
+        text-align: center;
+    }
+}
+
+.video-am {
+    position: relative;
+    top: -40px;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-am iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.white-bg {
+    background: rgba(255, 255, 255, 0.25);
+    z-index: 10;
+}
+
+.order {
+    padding: 12rem;
+    background: url('../img/IMG_8700.jpg') center center no-repeat;
+    .order-form {
+        max-width: 657px;
+        margin: 0 auto;
+        background-image: url('../img/bg-form.jpg');
+        background-position: center center;
+        font-family: CaviarDreams, sans-serif;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid white;
+        color: #fff;
+        padding: 4rem;
+        box-shadow: 0px 4px 19px -2px #f5f5f5;
+        input {
+            padding: 10px 40px 10px;
+            border-radius: 5px;
+            color: #737373;
+            margin-right: 15px;
+        }
+        input.name {
+            background: url(../img/name-icon.png) no-repeat center left #fff;
+        }
+        input.phone {
+            background: url(../img/phone-icon.png) no-repeat center left #fff;
+        }
+        button {
+            display: block;
+            margin: 15px auto;
+            margin-bottom: 0;
+            span {
+                padding-right: 10px;
+            }
+        }
+        h3 {
+            margin-top: 0px;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+footer {
+    padding: 10rem;
+    background-color: #ccc;
+    position: relative;
+    .top-f-bg {
+        width: 100%;
+        height: 106px;
+        background: url("../img/f_top.png") center center no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .f-couple {
+        width: 205px;
+        height: 332px;
+        background: url("../img/f_couple.png") center center no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: -25px;
+        right: 15px;
+    }
+    .f-violin-player {
+        width: 268px;
+        height: 263px;
+        background: url("../img/f_violin_player.png") center center no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: -13px;
+        left: 4px;
+    }
+}
+
+.contact-info .top-contacts {
+    margin-top: 0;
+}

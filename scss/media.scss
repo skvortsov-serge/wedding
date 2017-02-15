@@ -1,0 +1,194 @@
+/*==========  Desktop First Method  ==========*/
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 1122px) {
+    .wrapper header {
+        padding: 10px 0px 40px;
+    }
+    .wrapper .header-width {
+        width: 970px;
+    }
+    .wrapper .top-contacts {
+        margin-right: 20px;
+    }
+    .wrapper .top-menu .t-menu ul li {
+        padding-right: 14px;
+        font-size: 18px;
+    }
+    .wrapper .main-logo {
+        margin-left: 50px;
+    }
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 991px) {
+    .wrapper .header-width {
+        width: 750px;
+    }
+    .top-contacts .phone-number {
+        font-size: 20px;
+    }
+    .wrapper .main-logo {
+        margin-left: 0;
+    }
+    .wrapper .top-menu .t-menu ul li {
+        padding-right: 11px;
+        font-size: 16px;
+    }
+    .w-services .s-info h2 {
+        padding: 6.05rem 0 6.05rem 8rem;
+        font-size: 27px;
+    }
+    .order-form input {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 806px) {
+    .wrapper .order .order-form button {
+        margin: 20px auto;
+    }
+    .order .order-form input {
+        width: 100%;
+    }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 767px) {
+    .wrapper .header-width {
+        width: 450px;
+    }
+    .wrapper .s-logo {
+        margin-top: 30px;
+        text-align: right;
+    }
+    .wrapper header {
+        padding: 0px 0px 40px;
+    }
+    .wrapper .top-menu h1 {
+        font-size: 29px;
+        font-family: CaviarDreams, sans-serif;
+        letter-spacing: 0.7px;
+        font-weight: lighter;
+        margin: 120px 0 20px 5px;
+    }
+    .wrapper .main-logo {
+        margin-top: 30px;
+    }
+    .wrapper .main-logo a img {
+        height: 210px;
+        width: 75px;
+    }
+    .w-services .round,
+    .wrapper section &:hover .round {
+        width: 90px;
+        height: 90px;
+        margin-top: -45px;
+        background-size: contain;
+        left: 70px;
+    }
+    .w-services .s-info h2 {
+        padding: 6rem;
+        font-size: 22px;
+        margin-left: 75px;
+    }
+    .wrapper .about-me {
+        padding: 3rem;
+    }
+    .white-bg .video-am {
+        top: -15px;
+    }
+    .wrapper .order {
+        padding: 5rem;
+    }
+}
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px) {
+    .wrapper .header-width {
+        width: 315px;
+    }
+    .wrapper .soc-mobile {
+        width: 196px;
+    }
+    .wrapper .top-menu p {
+        margin-left: 20px;
+        font-size: 15px;
+    }
+    .wrapper .top-menu h1 {
+        font-size: 24px;
+        letter-spacing: -0.9px;
+    }
+    .w-services .s-info {
+        height: 120px;
+        h2 {
+            font-size: 18px;
+            padding: 5rem 0 5rem 2.5rem;
+        }
+    }
+    .w-services .round,
+    .wrapper section &:hover .round {
+        width: 70px;
+        height: 70px;
+        margin-top: -35px;
+        background-size: contain;
+        left: 70px;
+    }
+    .wrapper .order {
+        padding: 2rem;
+    }
+    .wrapper .order .order-form button {
+        font-size: 15px;
+        font-weight: bolder;
+    }
+    .wrapper .order .order-form input {
+        padding: 10px 5px 10px 35px;
+        letter-spacing: 1.1px;
+    }
+    .wrapper .order .order-form {
+        padding: 2rem;
+    } 
+}
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width: 320px) {}
+
+
+/*==========  Mobile First Method  ==========*/
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (min-width: 320px) {}
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (min-width: 480px) {}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 992px) {}
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1200px) {}
