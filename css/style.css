@@ -8117,7 +8117,43 @@ body {
 .wrapper {
   max-width: 1260px;
   margin: 0 auto;
-  overflow: auto;
+}
+
+.scroll-header {
+  position: fixed;
+  font-size: 20px;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid #666;
+  box-shadow: 0px 4px 19px -2px rgba(0, 0, 0, 0.77);
+  z-index: 15;
+}
+
+.scroll-header .scroll-menu {
+  z-index: 15;
+  width: 100%;
+  background-color: #FFF;
+  text-align: center;
+}
+
+.scroll-header .top-menu {
+  margin-top: 0;
+}
+
+.scroll-header .top-menu .t-menu ul li {
+  padding-right: 40px;
+  padding-bottom: 15px;
+}
+
+.scroll-header .s-logo,
+.scroll-header .top-menu h1,
+.scroll-header .top-menu p,
+.scroll-header .top-contacts {
+  display: none;
+}
+
+.container.header-width.scroll-header {
+  width: 100%;
 }
 
 header {
@@ -8315,22 +8351,23 @@ header {
   box-shadow: 0px 3px 20px -10px rgba(0, 0, 0, 0.89);
 }
 
-section {
+.w-services {
   height: auto;
   display: block;
+  z-index: -1;
 }
 
-section:hover h2 {
+.w-services:hover h2 {
   color: #000;
   transition: all .6s ease;
 }
 
-section:hover .background {
+.w-services:hover .background {
   opacity: 0;
   transition: all .6s ease;
 }
 
-section:hover .s-info {
+.w-services:hover .s-info {
   background-color: #f7f6f6;
   transition: all .6s ease;
 }
@@ -8339,6 +8376,11 @@ section:hover .s-info {
   height: auto;
   position: relative;
   border-bottom: 1px solid #fff;
+  z-index: 1;
+}
+
+.servises {
+  z-index: -1;
 }
 
 .section-width {
