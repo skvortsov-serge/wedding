@@ -11,13 +11,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var bg = document.querySelector('.parallax-bg');
         bg.style.backgroundPosition = '-325px -' + position / 2 + 'px';
         // --------------------------------------------------------------
-
         var header = document.querySelector('.header-width');
         if (document.body.scrollTop >= 165) {
+            if (window.innerWidth < 767) {
+                header.style.display = 'none';
+            } else {
+                header.style.display = 'block';
+            }
             document.querySelector('.about-me').style.marginTop = '200px';
+            document.querySelector('header').classList.add('header-padding');
             header.classList.add('scroll-header');
         } else {
+            if (window.innerWidth < 767) {
+                header.style.display = 'block';
+            }
             document.querySelector('.about-me').style.marginTop = '0px';
+            document.querySelector('header').classList.remove('header-padding');
             header.classList.remove('scroll-header');
         }
 
@@ -32,5 +41,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var top = element.offsetTop - 90;
         $('body,html').animate({ scrollTop: top }, 1500);
     });
+
+
+    function success(pos) {
+        var crd = pos.coords;
+
+        console.log('Your current position is:');
+        console.log(`Latitude : ${crd.latitude}`);
+        console.log(`Longitude: ${crd.longitude}`);
+        console.log(`More or less ${crd.accuracy} meters.`);
+
+    };
+
+    function error(err) {
+        console.warn(`ERROR(${err.code}): ${err.message}`);
+    };
+
+    // navigator.geolocation.getCurrentPosition(success, error);
 
 });

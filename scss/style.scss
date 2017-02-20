@@ -30,23 +30,31 @@ body {
 .wrapper {
     max-width: 1260px;
     margin: 0 auto;
+    position: relative;
     // overflow-y: auto;
+}
+
+.header-width {
+    width: 1120px;
+}
+
+.header-padding {
+    padding: 0;
 }
 
 .scroll-header {
     position: fixed;
     font-size: 20px;
-    width: 100%;
+    width: 1260px;
     top: 0;
+    background-color: #fff;
     border-bottom: 1px solid #666;
     box-shadow: 0px 4px 19px -2px rgba(0, 0, 0, 0.77);
     z-index: 15;
     .scroll-menu {
         z-index: 15;
-        width: 100%;
         background-color: #FFF;
         text-align: center;
-
     }
     .top-menu {
         margin-top: 0;
@@ -55,28 +63,20 @@ body {
             padding-bottom: 15px;
         }
     }
-    .s-logo,
+    .main-logo,
     .top-menu h1,
     .top-menu p,
     .top-contacts {
         display: none;
-        // transition: all .6s ease;
     }
 }
 
-.container.header-width.scroll-header {
-    width: 100%;
-}
 header {
     padding: 10px 70px 40px;
     background-color: #FFF;
     border-bottom: 1px solid $page-color;
     box-shadow: 0px 4px 19px -2px rgba(0, 0, 0, 0.77);
     z-index: 10;
-}
-
-.header-width {
-    width: 1120px;
 }
 
 .main-logo a {
@@ -510,18 +510,18 @@ footer {
     .top-f-bg {
         width: 100%;
         height: 106px;
-        background: url("../img/f_top.png") center center no-repeat;
+        background: url("../img/f_top.png") center center repeat-x;
         position: absolute;
         top: 0;
         left: 0;
     }
     .f-couple {
-        width: 205px;
-        height: 332px;
+        width: 185px;
+        height: 302px;
         background: url("../img/f_couple.png") center center no-repeat;
         background-size: contain;
         position: absolute;
-        top: -25px;
+        top: -19px;
         right: 15px;
     }
     .f-violin-player {
@@ -533,8 +533,18 @@ footer {
         top: -13px;
         left: 4px;
     }
+    .f-left {
+        text-align: center;
+        p {
+            margin-top: 30px;
+        }
+    }
 }
 
 .contact-info .top-contacts {
     margin-top: 0;
+}
+
+.f-cont {
+    // width: 910px;
 }

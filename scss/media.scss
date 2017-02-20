@@ -9,6 +9,9 @@
     .wrapper header {
         padding: 10px 0px 40px;
     }
+    body .wrapper .scroll-header {
+        width: 1260px;
+    }
     .wrapper .header-width {
         width: 970px;
     }
@@ -22,17 +25,37 @@
     .wrapper .main-logo {
         margin-left: 50px;
     }
+    .f-right .top-contacts {
+        margin-right: 50px;
+    }
+    .wrapper footer .f-violin-player {
+        width: 218px;
+        height: 233px;
+    }
+    .wrapper footer .top-f-bg {
+        width: 80%;
+        height: 96px;
+        background-size: cover;
+        left: initial;
+    }
+    .f-cont {
+        width: 875px;
+    }
 }
 
 
 /* Medium Devices, Desktops */
 
 @media only screen and (max-width: 991px) {
-    .wrapper .header-width {
-        width: 750px;
+    .wrapper .header-width,
+    body .wrapper .scroll-header {
+        width: 100%;
+    }
+    .wrapper .scroll-header .scroll-menu {
+        width: 100%;
     }
     .top-contacts .phone-number {
-        font-size: 20px;
+        font-size: 19px;
     }
     .wrapper .main-logo {
         margin-left: 0;
@@ -47,6 +70,29 @@
     }
     .order-form input {
         margin-top: 10px;
+    }
+    .f-cont {
+        width: initial;
+    }
+    .wrapper footer {
+        padding: 5rem;
+    }
+    .wrapper footer .f-couple {
+        width: 124px;
+        height: 200px;
+        top: -20px;
+        right: 14px;
+    }
+    .f-right .top-contacts {
+        margin-right: 0px;
+    }
+    .wrapper footer .f-violin-player {
+        width: 178px;
+        height: 193px;
+    }
+    .wrapper footer .top-f-bg {
+        width: 80%;
+        height: 84px;
     }
 }
 
@@ -109,6 +155,20 @@
     .wrapper .order {
         padding: 5rem;
     }
+    .wrapper footer {
+        padding: 4rem;
+    }
+    .wrapper footer .top-f-bg {
+        height: 76px;
+        width: 100%;
+        left: 0;
+    }
+    .top-contacts .phone-number {
+        font-size: 17px;
+    }
+    .f-cont .f-right .top-contacts {
+        text-align: center;
+    }
 }
 
 
@@ -157,7 +217,7 @@
     }
     .wrapper .order .order-form {
         padding: 2rem;
-    } 
+    }
 }
 
 
