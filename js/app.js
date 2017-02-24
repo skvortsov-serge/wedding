@@ -11,16 +11,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var wScroll = document.body.scrollTop;
         var position = 1600 + wScroll;
         var bg = document.querySelector('.parallax-bg');
-        bg.style.backgroundPosition = '-325px -' + position / 2 + 'px';
+        bg.style.backgroundPosition = '-145px -' + position / 2 + 'px';
         // --------------------------------------------------------------
         var header = document.querySelector('.header-width');
         if (document.body.scrollTop >= 165) {
             if (window.innerWidth < 767) {
                 header.style.display = 'none';
+                document.querySelector('.about-me').style.marginTop = '0px';
             } else {
                 header.style.display = 'block';
+                document.querySelector('.about-me').style.marginTop = '200px';
             }
-            document.querySelector('.about-me').style.marginTop = '200px';
             document.querySelector('header').classList.add('header-padding');
             header.classList.add('scroll-header');
         } else {
@@ -40,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var id = e.target.getAttribute('href');
         var element = document.querySelector(id);
         var header = document.querySelector('header');
-        var top = element.offsetTop - 90;
+        var top = element.offsetTop - 100;
         $('body,html').animate({ scrollTop: top }, 1500);
     });
 
@@ -150,29 +151,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
             console.log('your name is ok');
             return true;
         }
-
-        // if (fld.value == "") {
-        //     fld.style.background = 'Yellow';
-        //     error = "You didn't enter a username.\n";
-        //     alert(error);
-        //     return false;
-
-        // } else if ((fld.value.length < 5) || (fld.value.length > 15)) {
-        //     fld.style.background = 'Yellow';
-        //     error = "The username is the wrong length.\n";
-        //     alert(error);
-        //     return false;
-
-        // } else if (illegalChars.test(fld.value)) {
-        //     fld.style.background = 'Yellow';
-        //     error = "The username contains illegal characters.\n";
-        //     alert(error);
-        //     return false;
-
-        // } else {
-        //     fld.style.background = 'White';
-        // }
-        // return true;
     }
 
 });

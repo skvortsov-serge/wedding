@@ -1,6 +1,9 @@
 @import 'bootstrap';
 @import 'media';
 $page-color: #114da2;
+$main-color:#842323;
+// $accent-color:
+$additional-color: #b8e2f7;
 @font-face {
     font-family: CaviarDreams_BoldItalic;
     src: url('../fonts/CaviarDreams_BoldItalic.ttf');
@@ -23,7 +26,10 @@ $page-color: #114da2;
 }
 
 body {
-    background-image: url("../img/background.png");
+    background-image: url("../img/kr_derevo.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    // background-color: #842323;
     font-family: CaviarDreams, sans-serif;
 }
 
@@ -72,9 +78,11 @@ body {
 }
 
 header {
-    padding: 10px 70px 40px;
+    // padding: 10px 70px 40px;
+    padding: 1rem;
     background-color: #FFF;
-    border-bottom: 1px solid $page-color;
+    // border-bottom: 1px solid $page-color;
+    border-bottom: 15px solid #842323;
     box-shadow: 0px 4px 19px -2px rgba(0, 0, 0, 0.77);
     z-index: 10;
 }
@@ -82,39 +90,51 @@ header {
 .main-logo a {
     display: block;
     img {
-        height: 240px;
+        height: 90px;
         width: 90px;
     }
 }
 
 .top-menu {
-    margin-top: 74px;
-    h1 {
-        font-size: 34px;
-        font-family: CaviarDreams, sans-serif;
-        letter-spacing: 0.7px;
-        font-weight: lighter;
-        margin: 50px 0 30px 40px;
-    }
-    p {
-        color: $page-color;
-        margin-left: 40px;
-        font-size: 18px;
-        font-family: CaviarDreams, sans-serif;
-    }
+    // margin-top: 74px;
+    // h1 {
+    //     font-size: 34px;
+    //     font-family: CaviarDreams, sans-serif;
+    //     letter-spacing: 0.7px;
+    //     font-weight: lighter;
+    //     margin: 50px 0 30px 40px;
+    // }
+    // p {
+    //     color: $page-color;
+    //     margin-left: 40px;
+    //     font-size: 18px;
+    //     font-family: CaviarDreams, sans-serif;
+    // }
     .t-menu {
-        margin-top: 30px;
-        ul li {
-            display: inline-block;
-            padding-right: 40px;
-            font-family: CaviarDreams, sans-serif;
-            &:last-child {
-                padding-right: 0;
+        margin-top: 40px;
+        text-align: center;
+        ul {
+            text-align: justify;
+            padding-left: 0;
+            &:after {
+                content: '';
+                display: inline-block;
+                width: 100%;
+                height: 0;
             }
-            a {
-                color: dimgrey;
-                &:hover {
-                    color: $page-color;
+            li {
+                display: inline-block;
+                // padding-right: 50px;
+                font-size: 20px;
+                font-family: CaviarDreams, sans-serif;
+                &:last-child {
+                    padding-right: 0;
+                }
+                a {
+                    color: dimgrey;
+                    &:hover {
+                        color: $page-color;
+                    }
                 }
             }
         }
@@ -123,8 +143,8 @@ header {
 
 .phone-number {
     font-size: 22px;
-    font-family: CaviarDreams_Bold, sans-serif;
-    font-weight: bolder;
+    font-family: CaviarDreams, sans-serif;
+    font-weight: 300;
     letter-spacing: -0.9px;
 }
 
@@ -187,10 +207,11 @@ header {
 }
 
 .top-contacts {
-    margin-top: 70px;
+    margin-top: 20px;
     text-align: right;
 }
 
+// 
 // -------------------mobile menu----------------
 .mobile-menu {
     ul {
@@ -296,8 +317,8 @@ header {
     //     transition: all .6s ease;
     // }
     &:hover .s-info {
-        // background-color: #1c6ad8;
-        background-color: #f7f6f6;
+        background: url('../img/sky-bg-hover.gif') center center no-repeat;
+        background-size: cover;
         transition: all .6s ease;
     }
 }
@@ -305,7 +326,7 @@ header {
 .w-services {
     height: auto;
     position: relative;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #ff4545;
     z-index: 1;
 }
 
@@ -350,8 +371,8 @@ header {
 }
 
 .s-info {
-    // background-color: $page-color;
-    background-color: #ccc;
+    background: url('../img/sky-bg.gif') center center no-repeat;
+    background-size: cover;
     height: 150px;
     h2 {
         color: #000;
@@ -418,11 +439,12 @@ header {
     color: #fff;
     z-index: -1;
     position: relative;
-    border-bottom: 1px solid #fff;
+    border-bottom: 3px solid #f94c5a;
     .parallax-bg {
-        background: url("../img/bg-am-exp.jpg") no-repeat;
-        // background-position: -1650px -1200px;
-        background-position: -325px -800px;
+        // background: url("../img/bg-am-exp.jpg") no-repeat;
+        background: url("../img/bg-am.jpg") no-repeat;
+        background-position: -145px -840px;
+        // background-position: -325px -800px;
         position: absolute;
         top: 0;
         left: 0;
@@ -551,7 +573,12 @@ footer {
 .f-cont {
     // width: 910px;
 }
-
+label {
+    display: inline-table;
+    max-width: 40%;
+    height: auto;
+    transition: all .6s ease;
+}
 #hidden_form {
     max-width: 420px;
     border: 1px solid white;
@@ -562,6 +589,7 @@ footer {
     text-align: center;
     padding: 3rem;
     margin: auto;
+    position: relative;
     h2 {
         margin-top: 0;
         margin-bottom: 25px;
@@ -591,7 +619,9 @@ footer {
             background: url(../img/phone-icon.png) no-repeat center left #fff;
         }
     }
-
+}
+.mfp-close-btn-in .mfp-close {
+    color: #fff;
 }
 .button-wrap {
     margin-top: 15px;
@@ -599,9 +629,17 @@ footer {
         margin-right: 10px;
     }
 }
+
 .message-error {
     color: #ff2121;
     text-align: left;
     margin-top: 5px;
     letter-spacing: 1.5px;
+    transition: all .6s ease;
 }
+
+.message-error.phoneDiv,
+.message-error.nameDiv {
+    max-width: 100%;
+}
+

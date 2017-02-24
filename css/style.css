@@ -7942,15 +7942,9 @@ button.close {
   .wrapper .header-width {
     width: 970px;
   }
-  .wrapper .top-contacts {
-    margin-right: 20px;
-  }
   .wrapper .top-menu .t-menu ul li {
-    padding-right: 14px;
+    padding-right: 40px;
     font-size: 18px;
-  }
-  .wrapper .main-logo {
-    margin-left: 50px;
   }
   .f-right .top-contacts {
     margin-right: 50px;
@@ -7977,17 +7971,14 @@ button.close {
     width: 100%;
   }
   .wrapper .scroll-header .scroll-menu {
-    width: 100%;
+    width: 65%;
   }
   .top-contacts .phone-number {
-    font-size: 19px;
-  }
-  .wrapper .main-logo {
-    margin-left: 0;
+    font-size: 21px;
   }
   .wrapper .top-menu .t-menu ul li {
-    padding-right: 11px;
-    font-size: 16px;
+    padding-right: 20px;
+    font-size: 17px;
   }
   .w-services .s-info h2 {
     padding: 6.05rem 0 6.05rem 8rem;
@@ -8092,6 +8083,10 @@ button.close {
   .f-cont .f-right .top-contacts {
     text-align: center;
   }
+  .order-form label {
+    display: block;
+    max-width: 100%;
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -8170,7 +8165,9 @@ button.close {
 }
 
 body {
-  background-image: url("../img/background.png");
+  background-image: url("../img/kr_derevo.jpg");
+  background-repeat: repeat;
+  background-size: cover;
   font-family: CaviarDreams, sans-serif;
 }
 
@@ -8222,9 +8219,9 @@ body {
 }
 
 header {
-  padding: 10px 70px 40px;
+  padding: 1rem;
   background-color: #FFF;
-  border-bottom: 1px solid #114da2;
+  border-bottom: 15px solid #842323;
   box-shadow: 0px 4px 19px -2px rgba(0, 0, 0, 0.77);
   z-index: 10;
 }
@@ -8234,36 +8231,30 @@ header {
 }
 
 .main-logo a img {
-  height: 240px;
+  height: 90px;
   width: 90px;
 }
 
-.top-menu {
-  margin-top: 74px;
-}
-
-.top-menu h1 {
-  font-size: 34px;
-  font-family: CaviarDreams, sans-serif;
-  letter-spacing: 0.7px;
-  font-weight: lighter;
-  margin: 50px 0 30px 40px;
-}
-
-.top-menu p {
-  color: #114da2;
-  margin-left: 40px;
-  font-size: 18px;
-  font-family: CaviarDreams, sans-serif;
-}
-
 .top-menu .t-menu {
-  margin-top: 30px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.top-menu .t-menu ul {
+  text-align: justify;
+  padding-left: 0;
+}
+
+.top-menu .t-menu ul:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 0;
 }
 
 .top-menu .t-menu ul li {
   display: inline-block;
-  padding-right: 40px;
+  font-size: 20px;
   font-family: CaviarDreams, sans-serif;
 }
 
@@ -8281,8 +8272,8 @@ header {
 
 .phone-number {
   font-size: 22px;
-  font-family: CaviarDreams_Bold, sans-serif;
-  font-weight: bolder;
+  font-family: CaviarDreams, sans-serif;
+  font-weight: 300;
   letter-spacing: -0.9px;
 }
 
@@ -8347,7 +8338,7 @@ header {
 }
 
 .top-contacts {
-  margin-top: 70px;
+  margin-top: 20px;
   text-align: right;
 }
 
@@ -8431,14 +8422,15 @@ header {
 }
 
 .w-services:hover .s-info {
-  background-color: #f7f6f6;
+  background: url("../img/sky-bg-hover.gif") center center no-repeat;
+  background-size: cover;
   transition: all .6s ease;
 }
 
 .w-services {
   height: auto;
   position: relative;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #ff4545;
   z-index: 1;
 }
 
@@ -8483,7 +8475,8 @@ header {
 }
 
 .s-info {
-  background-color: #ccc;
+  background: url("../img/sky-bg.gif") center center no-repeat;
+  background-size: cover;
   height: 150px;
 }
 
@@ -8549,12 +8542,12 @@ header {
   color: #fff;
   z-index: -1;
   position: relative;
-  border-bottom: 1px solid #fff;
+  border-bottom: 3px solid #f94c5a;
 }
 
 .about-me .parallax-bg {
-  background: url("../img/bg-am-exp.jpg") no-repeat;
-  background-position: -325px -800px;
+  background: url("../img/bg-am.jpg") no-repeat;
+  background-position: -145px -840px;
   position: absolute;
   top: 0;
   left: 0;
@@ -8692,6 +8685,13 @@ footer .f-left p {
   margin-top: 0;
 }
 
+label {
+  display: inline-table;
+  max-width: 40%;
+  height: auto;
+  transition: all .6s ease;
+}
+
 #hidden_form {
   max-width: 420px;
   border: 1px solid white;
@@ -8702,6 +8702,7 @@ footer .f-left p {
   text-align: center;
   padding: 3rem;
   margin: auto;
+  position: relative;
 }
 
 #hidden_form h2 {
@@ -8739,6 +8740,10 @@ footer .f-left p {
   background: url(../img/phone-icon.png) no-repeat center left #fff;
 }
 
+.mfp-close-btn-in .mfp-close {
+  color: #fff;
+}
+
 .button-wrap {
   margin-top: 15px;
 }
@@ -8752,4 +8757,10 @@ footer .f-left p {
   text-align: left;
   margin-top: 5px;
   letter-spacing: 1.5px;
+  transition: all .6s ease;
+}
+
+.message-error.phoneDiv,
+.message-error.nameDiv {
+  max-width: 100%;
 }

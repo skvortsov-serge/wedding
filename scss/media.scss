@@ -15,16 +15,16 @@
     .wrapper .header-width {
         width: 970px;
     }
-    .wrapper .top-contacts {
-        margin-right: 20px;
-    }
+    // .wrapper .top-contacts {
+    //     margin-right: 20px;
+    // }
     .wrapper .top-menu .t-menu ul li {
-        padding-right: 14px;
+        padding-right: 40px;
         font-size: 18px;
     }
-    .wrapper .main-logo {
-        margin-left: 50px;
-    }
+    // .wrapper .main-logo {
+    //     margin-left: 50px;
+    // }
     .f-right .top-contacts {
         margin-right: 50px;
     }
@@ -52,17 +52,17 @@
         width: 100%;
     }
     .wrapper .scroll-header .scroll-menu {
-        width: 100%;
+        width: 65%;
     }
     .top-contacts .phone-number {
-        font-size: 19px;
+        font-size: 21px;
     }
-    .wrapper .main-logo {
-        margin-left: 0;
-    }
+    // .wrapper .main-logo {
+    //     margin-left: 0;
+    // }
     .wrapper .top-menu .t-menu ul li {
-        padding-right: 11px;
-        font-size: 16px;
+        padding-right: 20px;
+        font-size: 17px;
     }
     .w-services .s-info h2 {
         padding: 6.05rem 0 6.05rem 8rem;
@@ -168,6 +168,10 @@
     }
     .f-cont .f-right .top-contacts {
         text-align: center;
+    }
+    .order-form label {
+        display: block;
+        max-width: 100%;
     }
 }
 
