@@ -7933,31 +7933,21 @@ button.close {
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1122px) {
-  .wrapper header {
+  body header {
     padding: 10px 0px 40px;
   }
-  body .wrapper .scroll-header {
+  body body .scroll-header {
     width: 1260px;
   }
-  .wrapper .header-width {
+  body .header-width {
     width: 970px;
   }
-  .wrapper .top-menu .t-menu ul li {
+  body .top-menu .t-menu ul li {
     padding-right: 40px;
     font-size: 18px;
   }
   .f-right .top-contacts {
     margin-right: 50px;
-  }
-  .wrapper footer .f-violin-player {
-    width: 218px;
-    height: 233px;
-  }
-  .wrapper footer .top-f-bg {
-    width: 80%;
-    height: 96px;
-    background-size: cover;
-    left: initial;
   }
   .f-cont {
     width: 875px;
@@ -7966,22 +7956,27 @@ button.close {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 991px) {
-  .wrapper .header-width,
-  body .wrapper .scroll-header {
+  body .header-width,
+  body body .scroll-header {
     width: 100%;
   }
-  .wrapper .scroll-header .scroll-menu {
+  body .scroll-header .scroll-menu {
     width: 65%;
   }
   .top-contacts .phone-number {
     font-size: 21px;
   }
-  .wrapper .top-menu .t-menu ul li {
+  body .top-menu .t-menu ul li {
     padding-right: 20px;
     font-size: 17px;
   }
+  .servises .w-services,
+  .w-services .s-info,
+  .w-services .s-photo,
+  .w-services .background {
+    height: 150px;
+  }
   .w-services .s-info h2 {
-    padding: 6.05rem 0 6.05rem 8rem;
     font-size: 27px;
   }
   .order-form input {
@@ -7990,30 +7985,16 @@ button.close {
   .f-cont {
     width: initial;
   }
-  .wrapper footer {
+  body footer {
     padding: 5rem;
-  }
-  .wrapper footer .f-couple {
-    width: 124px;
-    height: 200px;
-    top: -20px;
-    right: 14px;
   }
   .f-right .top-contacts {
     margin-right: 0px;
   }
-  .wrapper footer .f-violin-player {
-    width: 178px;
-    height: 193px;
-  }
-  .wrapper footer .top-f-bg {
-    width: 80%;
-    height: 84px;
-  }
 }
 
 @media only screen and (max-width: 806px) {
-  .wrapper .order .order-form button {
+  body .order .order-form button {
     margin: 20px auto;
   }
   .order .order-form input {
@@ -8023,32 +8004,32 @@ button.close {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) {
-  .wrapper .header-width {
+  body .header-width {
     width: 450px;
   }
-  .wrapper .s-logo {
+  body .s-logo {
     margin-top: 30px;
     text-align: right;
   }
-  .wrapper header {
+  body header {
     padding: 0px 0px 40px;
   }
-  .wrapper .top-menu h1 {
+  body .top-menu h1 {
     font-size: 29px;
     font-family: CaviarDreams, sans-serif;
     letter-spacing: 0.7px;
     font-weight: lighter;
     margin: 120px 0 20px 5px;
   }
-  .wrapper .main-logo {
+  body .main-logo {
     margin-top: 30px;
   }
-  .wrapper .main-logo a img {
+  body .main-logo a img {
     height: 210px;
     width: 75px;
   }
   .w-services .round,
-  .wrapper section :hover .round {
+  body section :hover .round {
     width: 90px;
     height: 90px;
     margin-top: -45px;
@@ -8056,23 +8037,23 @@ button.close {
     left: 70px;
   }
   .w-services .s-info h2 {
-    padding: 6rem;
+    padding-left: 55px;
     font-size: 22px;
     margin-left: 75px;
   }
-  .wrapper .about-me {
+  body .about-me {
     padding: 3rem;
   }
   .white-bg .video-am {
     top: -15px;
   }
-  .wrapper .order {
+  body .order {
     padding: 5rem;
   }
-  .wrapper footer {
+  body footer {
     padding: 4rem;
   }
-  .wrapper footer .top-f-bg {
+  body footer .top-f-bg {
     height: 76px;
     width: 100%;
     left: 0;
@@ -8091,47 +8072,49 @@ button.close {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  .wrapper .header-width {
+  body .header-width {
     width: 315px;
   }
-  .wrapper .soc-mobile {
+  body .soc-mobile {
     width: 196px;
   }
-  .wrapper .top-menu p {
+  body .top-menu p {
     margin-left: 20px;
     font-size: 15px;
   }
-  .wrapper .top-menu h1 {
+  body .top-menu h1 {
     font-size: 24px;
     letter-spacing: -0.9px;
   }
+  .servises .w-services,
   .w-services .s-info {
     height: 120px;
   }
+  .servises .w-services h2,
   .w-services .s-info h2 {
     font-size: 18px;
-    padding: 5rem 0 5rem 2.5rem;
+    padding-left: 25px;
   }
   .w-services .round,
-  .wrapper section :hover .round {
+  body section :hover .round {
     width: 70px;
     height: 70px;
     margin-top: -35px;
     background-size: contain;
     left: 70px;
   }
-  .wrapper .order {
+  body .order {
     padding: 2rem;
   }
-  .wrapper .order .order-form button {
+  body .order .order-form button {
     font-size: 15px;
     font-weight: bolder;
   }
-  .wrapper .order .order-form input {
+  body .order .order-form input {
     padding: 10px 5px 10px 35px;
     letter-spacing: 1.1px;
   }
-  .wrapper .order .order-form {
+  body .order .order-form {
     padding: 2rem;
   }
 }
@@ -8164,16 +8147,21 @@ button.close {
   font-style: normal;
 }
 
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
-  background-image: url("../img/kr_derevo.jpg");
-  background-repeat: repeat;
+  height: 100%;
   font-family: CaviarDreams, sans-serif;
 }
 
 .wrapper {
-  max-width: 1260px;
-  margin: 0 auto;
-  position: relative;
+  perspective: 1px;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .header-width {
@@ -8218,20 +8206,32 @@ body {
 }
 
 header {
+  width: calc(100% - 17px);
   padding: 1rem;
-  background-color: #FFF;
-  border-bottom: 15px solid #842323;
-  box-shadow: 0px 4px 19px -2px rgba(0, 0, 0, 0.77);
+  background-color: #2b2b2d;
+  background: url(../img/Free-Stressed-linen-patterns.jpg) center center;
+  background-size: cover;
+  height: 145px;
+  border-bottom: 2px solid #fff;
+  box-shadow: -5px 4px 19px -2px rgba(0, 0, 0, 0.77);
   z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .main-logo a {
   display: block;
+  position: relative;
 }
 
 .main-logo a img {
-  height: 90px;
-  width: 90px;
+  position: absolute;
+  top: -20px;
+  left: 15px;
+  height: 140px;
+  width: 140px;
 }
 
 .top-menu .t-menu {
@@ -8262,7 +8262,7 @@ header {
 }
 
 .top-menu .t-menu ul li a {
-  color: dimgrey;
+  color: white;
 }
 
 .top-menu .t-menu ul li a:hover {
@@ -8271,6 +8271,7 @@ header {
 
 .phone-number {
   font-size: 22px;
+  color: #fff;
   font-family: CaviarDreams, sans-serif;
   font-weight: 300;
   letter-spacing: -0.9px;
@@ -8364,6 +8365,7 @@ header {
 .mobile-menu ul li a {
   color: white;
   text-decoration: none;
+  padding: 9px 36%;
 }
 
 .soc-mobile {
@@ -8373,18 +8375,29 @@ header {
 }
 
 .navbar-toggle {
-  border: 1px solid black;
+  border: 1px solid #fff;
   border-radius: 4px;
 }
 
 .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-toggle:hover .icon-bar,
+.navbar-toggle:focus .icon-bar {
   background-color: #000;
 }
 
+.btn-default:hover, .btn-default:focus {
+  color: #000;
+  background-color: #fff;
+  border-color: #adadad;
+}
+
 .toggle-menu {
-  background-color: rgba(17, 77, 162, 0.9);
+  width: calc(100% - 17px);
+  background-color: rgba(43, 43, 45, 0.9);
   position: fixed;
-  width: 100%;
   z-index: 5;
   top: -9999px;
   transition: top 0.25s;
@@ -8396,18 +8409,20 @@ header {
 
 .navbar-header {
   height: 50px;
-  width: 100%;
+  width: calc(100% - 17px);
   position: fixed;
   z-index: 4;
   border-bottom: 2px solid white;
-  background-color: rgba(17, 77, 162, 0.9);
+  background-color: rgba(43, 43, 45, 0.9);
   box-shadow: 0px 3px 20px -10px rgba(0, 0, 0, 0.89);
 }
 
 .w-services {
-  height: auto;
+  height: 200px;
   display: block;
-  z-index: -1;
+  position: relative;
+  border-bottom: 1px solid #fff;
+  z-index: 1;
 }
 
 .w-services:hover h2 {
@@ -8426,13 +8441,6 @@ header {
   transition: all .6s ease;
 }
 
-.w-services {
-  height: auto;
-  position: relative;
-  border-bottom: 1px solid #ff4545;
-  z-index: 1;
-}
-
 .servises {
   z-index: -1;
 }
@@ -8448,7 +8456,7 @@ header {
 
 .s-photo {
   width: 100%;
-  height: 150px;
+  height: 200px;
   background: url("../img/services/wed_cer2.jpg") 0px -60px no-repeat;
   background-size: cover;
 }
@@ -8476,7 +8484,9 @@ header {
 .s-info {
   background: url("../img/sky-bg.gif") center center no-repeat;
   background-size: cover;
-  height: 150px;
+  height: 200px;
+  display: flex;
+  align-items: center;
 }
 
 .s-info h2 {
@@ -8485,7 +8495,7 @@ header {
   font-family: CaviarDreams, sans-serif;
   margin: 0;
   box-sizing: border-box;
-  padding: 55px 0 55px 80px;
+  padding-left: 85px;
   transition: all .6s ease;
 }
 
@@ -8526,7 +8536,7 @@ header {
 .background {
   position: absolute;
   width: 50%;
-  height: 150px;
+  height: 200px;
   top: 0;
   left: 0;
   background-color: rgba(255, 255, 255, 0.78);
@@ -8534,60 +8544,58 @@ header {
 }
 
 .about-me {
-  padding: 8rem;
-  background-color: #FFF;
-  background-attachment: fixed;
-  background-size: initial;
-  color: #fff;
-  z-index: -1;
   position: relative;
-  border-bottom: 3px solid #f94c5a;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  transform-style: inherit;
+  background-color: #FFF;
+  color: #fff;
+  margin-top: 120px;
+  z-index: -1;
+  border-bottom: 3px solid #fff;
 }
 
-.about-me .parallax-bg {
-  background: url("../img/bg-am.jpg") no-repeat;
-  background-position: -145px -840px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+.about-me:before {
+  background: url("../img/sky-bg.jpg") center center;
+  background-size: cover;
+  transform: translateZ(-1px) scale(2);
+  z-index: 1;
 }
 
 .text-am {
-  height: 300px;
+  color: #000;
+  position: absolute;
+  transform: translateZ(-2px) scale(2);
+  z-index: 1;
 }
 
-.text-am h3 {
-  font-size: 38px;
-  text-align: center;
+#about:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-.video-am {
-  position: relative;
-  top: -40px;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-}
-
-.video-am iframe {
+.parallax-forebg {
+  background: url("../img/am-conture.png") no-repeat;
+  background-position: 120px 100px;
+  background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.white-bg {
-  background: rgba(255, 255, 255, 0.25);
-  z-index: 10;
+  z-index: 1;
 }
 
 .order {
   padding: 12rem;
   background: url("../img/IMG_8700.jpg") center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   transition: all .6s ease;
 }
 
@@ -8639,40 +8647,13 @@ header {
 
 footer {
   padding: 10rem;
-  background-color: #ccc;
+  background-color: #2b2b2d;
   position: relative;
-}
-
-footer .top-f-bg {
-  width: 100%;
-  height: 106px;
-  background: url("../img/f_top.png") center center repeat-x;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-footer .f-couple {
-  width: 185px;
-  height: 302px;
-  background: url("../img/f_couple.png") center center no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: -19px;
-  right: 15px;
-}
-
-footer .f-violin-player {
-  width: 268px;
-  height: 263px;
-  background: url("../img/f_violin_player.png") center center no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: -13px;
-  left: 4px;
+  border-top: 2px solid #fff;
 }
 
 footer .f-left {
+  color: #fff;
   text-align: center;
 }
 
@@ -8704,12 +8685,17 @@ label {
   position: relative;
 }
 
+#hidden_form .message-error {
+  margin-left: 35px;
+}
+
 #hidden_form h2 {
   margin-top: 0;
   margin-bottom: 25px;
 }
 
 #hidden_form label {
+  max-width: 100%;
   margin-bottom: 15px;
   text-align: left;
   display: block;

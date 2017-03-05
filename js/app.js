@@ -6,33 +6,29 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
     $('.popup-order').magnificPopup();
+    var header = document.querySelector('header');
+    var aboutMe = document.querySelector('.about-me');
+    if (window.innerWidth < 768) {
+        header.style.height = 'initial';
+        aboutMe.style.marginTop = '50px';
+    }
+    window.addEventListener('resize', function() {
+        if (window.innerWidth < 768) {
+            header.style.height = 'initial';
+            aboutMe.style.marginTop = '50px';
+        } else {
+            header.style.height = '120px';
+            aboutMe.style.marginTop = '120px';
+        }
+    });
+
 
     window.onscroll = function() {
-        var wScroll = document.body.scrollTop;
-        var position = 1600 + wScroll;
-        var bg = document.querySelector('.parallax-bg');
-        bg.style.backgroundPosition = '-145px -' + position / 2 + 'px';
+        // var wScroll = document.body.scrollTop;
+        // var position = 1600 + wScroll;
+        // var bg = document.querySelector('.parallax-bg');
+        // bg.style.backgroundPosition = '-145px -' + position / 2 + 'px';
         // --------------------------------------------------------------
-        var header = document.querySelector('.header-width');
-        if (document.body.scrollTop >= 165) {
-            if (window.innerWidth < 767) {
-                header.style.display = 'none';
-                document.querySelector('.about-me').style.marginTop = '0px';
-            } else {
-                header.style.display = 'block';
-                document.querySelector('.about-me').style.marginTop = '200px';
-            }
-            document.querySelector('header').classList.add('header-padding');
-            header.classList.add('scroll-header');
-        } else {
-            if (window.innerWidth < 767) {
-                header.style.display = 'block';
-            }
-            document.querySelector('.about-me').style.marginTop = '0px';
-            document.querySelector('header').classList.remove('header-padding');
-            header.classList.remove('scroll-header');
-        }
-
     }
 
     var el = document.getElementsByClassName('t-menu')[0];
@@ -61,11 +57,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     };
 
     // navigator.geolocation.getCurrentPosition(success, error);
-    
-    var nameInput = document.querySelector('.name, .hidden>.name');
-    var phoneInput = document.querySelector('.phone');
 
-    phoneInput.addEventListener('input', function(e) {
+    function phoneValidation(e) {
         var error = "";
         var stripped = e.target.value.replace(/[\(\)\.\-\ ]/g, '');
         var regexpPhone = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
@@ -78,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             divPhone.innerHTML = error;
             return false;
 
-        } else  if (regexpPhone.test(e.target.value)) {
+        } else if (regexpPhone.test(e.target.value)) {
             e.target.style.border = '2px solid green';
             e.target.style.boxShadow = '0px 0px 12px 1px rgba(65,224,70,1)';
             divPhone.innerHTML = '';
@@ -98,10 +91,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
             return false;
         }
         return true;
-    });
+    }
 
-
-    nameInput.addEventListener('input', function(e) {
+    function nameValidation(e) {
         var error = "";
         var regex = /^[a-zA-Zа-яА-ЯёЁ ]{3,20}$/u;
         var value = e.target.value;
@@ -137,8 +129,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
             return false;
         }
         return true;
+    }
+    var nameInput = document.querySelector('.name, .hidden>.name');
+    var phoneInput = document.querySelector('.phone');
+    var nameInputModal = document.querySelector('#hidden_form input.name');
+    var phoneInputModal = document.querySelector('#hidden_form input.phone');
 
-    });
+    nameInput.addEventListener('input', nameValidation);
+    phoneInput.addEventListener('input', phoneValidation);
+
+    nameInputModal.addEventListener('input', nameValidation);
+    phoneInputModal.addEventListener('input', phoneValidation);
 
     function validateUsername(fld) {
         var error = "";

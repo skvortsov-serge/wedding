@@ -25,17 +25,26 @@ $additional-color: #b8e2f7;
     font-style: normal;
 }
 
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
-    background-image: url("../img/kr_derevo.jpg");
-    background-repeat: repeat;
-    // background-color: #842323;
+    // perspective: 1px;
+    height: 100%;
+    // overflow-x: hidden;
+    // overflow-y: scroll;
     font-family: CaviarDreams, sans-serif;
 }
 
 .wrapper {
-    max-width: 1260px;
-    margin: 0 auto;
-    position: relative;
+    perspective: 1px;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    // max-width: 1260px;
+    // margin: 0 auto;
 }
 
 .header-width {
@@ -76,38 +85,34 @@ body {
 }
 
 header {
-    // padding: 10px 70px 40px;
+    width: calc(100% - 17px);
     padding: 1rem;
-    background-color: #FFF;
-    // border-bottom: 1px solid $page-color;
-    border-bottom: 15px solid #842323;
-    box-shadow: 0px 4px 19px -2px rgba(0, 0, 0, 0.77);
+    background-color: #2b2b2d;
+    background: url(../img/Free-Stressed-linen-patterns.jpg) center center;
+    background-size: cover;
+    height: 145px;
+    border-bottom: 2px solid #fff;
+    box-shadow: -5px 4px 19px -2px rgba(0, 0, 0, 0.77);
     z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .main-logo a {
     display: block;
+    position: relative;
     img {
-        height: 90px;
-        width: 90px;
+        position: absolute;
+        top: -20px;
+        left: 15px;
+        height: 140px;
+        width: 140px;
     }
 }
 
 .top-menu {
-    // margin-top: 74px;
-    // h1 {
-    //     font-size: 34px;
-    //     font-family: CaviarDreams, sans-serif;
-    //     letter-spacing: 0.7px;
-    //     font-weight: lighter;
-    //     margin: 50px 0 30px 40px;
-    // }
-    // p {
-    //     color: $page-color;
-    //     margin-left: 40px;
-    //     font-size: 18px;
-    //     font-family: CaviarDreams, sans-serif;
-    // }
     .t-menu {
         margin-top: 40px;
         text-align: center;
@@ -122,14 +127,13 @@ header {
             }
             li {
                 display: inline-block;
-                // padding-right: 50px;
                 font-size: 20px;
                 font-family: CaviarDreams, sans-serif;
                 &:last-child {
                     padding-right: 0;
                 }
                 a {
-                    color: dimgrey;
+                    color: white;
                     &:hover {
                         color: $page-color;
                     }
@@ -141,6 +145,7 @@ header {
 
 .phone-number {
     font-size: 22px;
+    color: #fff;
     font-family: CaviarDreams, sans-serif;
     font-weight: 300;
     letter-spacing: -0.9px;
@@ -230,6 +235,7 @@ header {
             a {
                 color: white;
                 text-decoration: none;
+                padding: 9px 36%;
             }
         }
     }
@@ -246,17 +252,30 @@ header {
 }
 
 .navbar-toggle {
-    border: 1px solid black;
+    border: 1px solid #fff;
     border-radius: 4px;
     .icon-bar {
+        background-color: #fff;
+    }
+    &:hover .icon-bar,
+    &:focus .icon-bar {
         background-color: #000;
     }
 }
 
+.btn-default {
+    &:hover,
+    &:focus {
+        color: #000;
+        background-color: #fff;
+        border-color: #adadad;
+    }
+}
+
 .toggle-menu {
-    background-color: rgba(17, 77, 162, 0.9);
+    width: calc(100% - 17px);
+    background-color: rgba(43, 43, 45, 0.9);
     position: fixed;
-    width: 100%;
     z-index: 5;
     top: -9999px;
     transition: top 0.25s;
@@ -268,19 +287,21 @@ header {
 
 .navbar-header {
     height: 50px;
-    width: 100%;
+    width: calc(100% - 17px);
     position: fixed;
     z-index: 4;
     border-bottom: 2px solid white;
-    background-color: rgba(17, 77, 162, 0.9);
+    background-color: rgba(43, 43, 45, 0.9);
     box-shadow: 0px 3px 20px -10px rgba(0, 0, 0, 0.89);
 }
 
 // ------------------------------------------------------------------
 .w-services {
-    height: auto;
+    height: 200px;
     display: block;
-    z-index: -1;
+    position: relative;
+    border-bottom: 1px solid #fff;
+    z-index: 1;
     &:hover h2 {
         color: #000;
         transition: all .6s ease;
@@ -289,43 +310,11 @@ header {
         opacity: 0;
         transition: all .6s ease;
     }
-    // &:hover .round {
-    //     background: url("../img/services/1sw.png") center center no-repeat;
-    //     background-size: cover;
-    //     transition: all .6s ease;
-    // }
-    // &:hover .round2 {
-    //     background: url("../img/services/2sw.png") center center no-repeat;
-    //     background-size: cover;
-    //     transition: all .6s ease;
-    // }
-    // &:hover .round3 {
-    //     background: url("../img/services/3sw.png") center center no-repeat;
-    //     background-size: cover;
-    //     transition: all .6s ease;
-    // }
-    // &:hover .round4 {
-    //     background: url("../img/services/4sw.png") center center no-repeat;
-    //     background-size: cover;
-    //     transition: all .6s ease;
-    // }
-    // &:hover .round5 {
-    //     background: url("../img/services/5sw.png") center center no-repeat;
-    //     background-size: cover;
-    //     transition: all .6s ease;
-    // }
     &:hover .s-info {
         background: url('../img/sky-bg-hover.gif') center center no-repeat;
         background-size: cover;
         transition: all .6s ease;
     }
-}
-
-.w-services {
-    height: auto;
-    position: relative;
-    border-bottom: 1px solid #ff4545;
-    z-index: 1;
 }
 
 .servises {
@@ -343,7 +332,7 @@ header {
 
 .s-photo {
     width: 100%;
-    height: 150px;
+    height: 200px;
     background: url("../img/services/wed_cer2.jpg") 0px -60px no-repeat;
     background-size: cover;
 }
@@ -371,14 +360,16 @@ header {
 .s-info {
     background: url('../img/sky-bg.gif') center center no-repeat;
     background-size: cover;
-    height: 150px;
+    height: 200px;
+    display: flex;
+    align-items: center;
     h2 {
         color: #000;
         font-size: 28px;
         font-family: CaviarDreams, sans-serif;
         margin: 0;
         box-sizing: border-box;
-        padding: 55px 0 55px 80px;
+        padding-left: 85px;
         transition: all .6s ease;
     }
 }
@@ -420,70 +411,73 @@ header {
 .background {
     position: absolute;
     width: 50%;
-    height: 150px;
+    height: 200px;
     top: 0;
     left: 0;
-    // background-color: rgba(17, 77, 162, 0.78);
     background-color: rgba(255, 255, 255, 0.78);
     transition: all .6s ease;
 }
 
 // -------------------Section About Me-----------------
 .about-me {
-    padding: 8rem;
-    background-color: #FFF;
-    background-attachment: fixed;
-    background-size: initial;
-    color: #fff;
-    z-index: -1;
+    // background: url("../img/sky-bg.jpg") center center;
+    // padding: 25rem;
+    // background-attachment: fixed;
+    // background-size: initial;
     position: relative;
-    border-bottom: 3px solid #f94c5a;
-    .parallax-bg {
-        // background: url("../img/bg-am-exp.jpg") no-repeat;
-        background: url("../img/bg-am.jpg") no-repeat;
-        background-position: -145px -840px;
-        // background-position: -325px -800px;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    transform-style: inherit;
+    background-color: #FFF;
+    color: #fff;
+    margin-top: 120px;
+    z-index: -1;
+    border-bottom: 3px solid #fff;
+    &:before {
+        background: url("../img/sky-bg.jpg") center center;
+        background-size: cover;
+        transform: translateZ(-1px) scale(2);
+        z-index: 1;
+        // background-attachment: fixed;
+    }
+}
+.text-am {
+    color: #000;
+    position: absolute;
+    transform: translateZ(-2px)scale(2);
+    z-index: 1;
+}
+
+#about {
+    &:before {
+        content: "";
         position: absolute;
         top: 0;
+        bottom: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
+        right: 0;
     }
 }
 
-.text-am {
-    height: 300px;
-    h3 {
-        font-size: 38px;
-        text-align: center;
-    }
-}
-
-.video-am {
-    position: relative;
-    top: -40px;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-}
-
-.video-am iframe {
+.parallax-forebg {
+    background: url("../img/am-conture.png") no-repeat;
+    background-position: 120px 100px;
+    background-size: cover;
     position: absolute;
+    // transform: translateZ(-1px) scale(2);
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-.white-bg {
-    background: rgba(255, 255, 255, 0.25);
-    z-index: 10;
+    z-index: 1;
 }
 
 .order {
     padding: 12rem;
     background: url('../img/IMG_8700.jpg') center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     transition: all .6s ease;
     .order-form {
         max-width: 657px;
@@ -528,35 +522,11 @@ header {
 
 footer {
     padding: 10rem;
-    background-color: #ccc;
+    background-color: #2b2b2d;
     position: relative;
-    .top-f-bg {
-        width: 100%;
-        height: 106px;
-        background: url("../img/f_top.png") center center repeat-x;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    .f-couple {
-        width: 185px;
-        height: 302px;
-        background: url("../img/f_couple.png") center center no-repeat;
-        background-size: contain;
-        position: absolute;
-        top: -19px;
-        right: 15px;
-    }
-    .f-violin-player {
-        width: 268px;
-        height: 263px;
-        background: url("../img/f_violin_player.png") center center no-repeat;
-        background-size: contain;
-        position: absolute;
-        top: -13px;
-        left: 4px;
-    }
+    border-top: 2px solid #fff;
     .f-left {
+        color: #fff;
         text-align: center;
         p {
             margin-top: 30px;
@@ -571,12 +541,14 @@ footer {
 .f-cont {
     // width: 910px;
 }
+
 label {
     display: inline-table;
     max-width: 40%;
     height: auto;
     transition: all .6s ease;
 }
+
 #hidden_form {
     max-width: 420px;
     border: 1px solid white;
@@ -588,11 +560,15 @@ label {
     padding: 3rem;
     margin: auto;
     position: relative;
+    .message-error {
+        margin-left: 35px;
+    }
     h2 {
         margin-top: 0;
         margin-bottom: 25px;
     }
     label {
+        max-width: 100%;
         margin-bottom: 15px;
         text-align: left;
         display: block;
@@ -618,9 +594,11 @@ label {
         }
     }
 }
+
 .mfp-close-btn-in .mfp-close {
     color: #fff;
 }
+
 .button-wrap {
     margin-top: 15px;
     span {
@@ -640,4 +618,3 @@ label {
 .message-error.nameDiv {
     max-width: 100%;
 }
-
