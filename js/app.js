@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
     $('.popup-order').magnificPopup();
+    
     var header = document.querySelector('header');
     var aboutMe = document.querySelector('.about-me');
     if (window.innerWidth < 768) {
