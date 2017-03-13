@@ -70,6 +70,21 @@
             </div>
         </div>
     </header>
+    <div class="am-video-wrapper">
+        <div class="am-video-inner">
+            <!-- <iframe width="auto" height="auto" src="https://www.youtube.com/embed/bbDqwX0xMgA" frameborder="0" allowfullscreen></iframe> -->
+            <video class="video-player" src="img/Waterfall.mp4" poster="media/woods.jpg" preload="auto">
+                <source src="img/Waterfall.mp4" type="video/mp4; codecs=&quot;avc1.4D401E, mp4a.40.2&quot;">
+                <source src="media/woods.webm" type="video/webm; codecs=&quot;vp8.0, vorbis&quot;">
+                <source src="media/woods.ogg" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
+                <p>Sorry, but your browser does not support this video format.</p>
+            </video>
+            <button class="action action--close">
+                <i class="fa fa-close"></i>
+                <span class="action__label action__label--hidden">Close preview</span>
+            </button>
+        </div>
+    </div>
     <div class="wrapper">
         <section class="about-me" id="about">
             <div class="intro-left">
@@ -96,13 +111,21 @@
         </section>
         <section class="am-section">
             <div class="am-container">
-                <div class="am-title">
+                <!--                 <div class="am-title">
                     <h2>Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+                </div> -->
+                <div class="am-photo-stack">
+                    <img class="photo-stack-img photo-stack-rotation-1" src="img/stack-photo1.jpg" alt="Picture 1">
+                    <img class="photo-stack-img photo-stack-rotation-2" src="img/stack-photo2.jpg" alt="Picture 2">
+                    <img class="photo-stack-img photo-stack-rotation-3" src="img/stack-photo3.jpg" alt="Picture 3">
                 </div>
-                <div class="am-video-wrapper">
-                    <div class="am-video">
-                        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/bbDqwX0xMgA" frameborder="0" allowfullscreen></iframe>
+                <div class="am-content">
+                    <div class="loader">
+                        <i class="fa fa-spinner fa-pulse"></i>
                     </div>
+                    <button class="action action--hidden action--play">
+                        <i class="fa fa-play"></i><span class="action__label">Watch the video</span>
+                    </button>
                 </div>
             </div>
         </section>

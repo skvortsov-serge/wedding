@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
     $('.popup-order').magnificPopup();
-    
+
     var header = document.querySelector('header');
     var aboutMe = document.querySelector('.about-me');
     if (window.innerWidth < 768) {
@@ -23,14 +23,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     });
 
-
-    window.onscroll = function() {
-        // var wScroll = document.body.scrollTop;
-        // var position = 1600 + wScroll;
-        // var bg = document.querySelector('.parallax-bg');
-        // bg.style.backgroundPosition = '-145px -' + position / 2 + 'px';
-        // --------------------------------------------------------------
-    }
+    var lastScrollTop = 0;
+    $('.wrapper').scroll(function() {
+        var bodyPos = document.querySelector('.wrapper').scrollTop;
+        if (bodyPos > 110) {
+            if (bodyPos > lastScrollTop) {
+                $('header').fadeOut(300);
+            } else {
+                $('header').fadeIn(300);
+            }
+            lastScrollTop = bodyPos;
+        }
+    });
 
     var el = document.getElementsByClassName('t-menu')[0];
     el.addEventListener('click', function(e) {
@@ -154,5 +158,44 @@ document.addEventListener("DOMContentLoaded", function(event) {
             return true;
         }
     }
+
+    /*==========fullscring vidoe opening animation========*/
+
+    var bodyEl = document.body,
+        videoWrap = document.querySelector('.am-video-wrapper'),
+        videoEl = videoWrap.querySelector('video'),
+        playCtrl = document.querySelector('.action--play'),
+        closeCtrl = document.querySelector('.action--close');
+
+    function init() {
+        initEvents();
+    }
+
+    function initEvents() {
+        playCtrl.addEventListener('click', play);
+        closeCtrl.addEventListener('click', hide);
+        videoEl.addEventListener('canplaythrough', allowPlay);
+        videoEl.addEventListener('ended', hide);
+    }
+
+    function allowPlay() {
+        bodyEl.classList.add('video-loaded');
+    }
+
+    function play() {
+        videoEl.currentTime = 0;
+        videoWrap.classList.remove('video-wrap--hide');
+        videoWrap.classList.add('video-wrap--show');
+        setTimeout(function() { videoEl.play(); }, 600);
+    }
+
+    function hide() {
+        videoWrap.classList.remove('video-wrap--show');
+        videoWrap.classList.add('video-wrap--hide');
+        videoEl.pause();
+    }
+
+    init();
+    /*============================================================*/
 
 });

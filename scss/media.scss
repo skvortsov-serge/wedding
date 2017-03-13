@@ -2,7 +2,53 @@
 
 
 /* Large Devices, Wide Screens */
+@media screen and (min-width: 25em) {
+    .am-video-inner {
+        width: 30vw;
+        height: 30vw;
+        border: 20px solid #fff;
+        -webkit-transform: scale3d(0.1,0.1,1) rotate3d(0,0,1,-5deg);
+        transform: scale3d(0.1,0.1,1) rotate3d(0,0,1,-5deg);
+    }
+    .video-wrap--show .am-video-inner {
+        opacity: 0;
+        -webkit-animation: showVideo-1 1.25s forwards;
+        animation: showVideo-1 1.25s forwards;
+    }
+    .video-wrap--hide .am-video-inner {
+        -webkit-animation: hideVideo 1.25s forwards;
+        animation: hideVideo 1.25s forwards;
+    }
+    .video-player {
+        left: 50%;
+        width: auto;
+        height: 100vh;
+        -webkit-transition: -webkit-transform 1s;
+        transition: transform 1s;
+        -webkit-transform: translate3d(-50%,-50%,0) scale3d(0.7,0.7,1) rotate3d(0,0,1,5deg);
+        transform: translate3d(-50%,-50%,0) scale3d(0.7,0.7,1) rotate3d(0,0,1,5deg);
+    }
+    .video-wrap--show .video-player,
+    .video-wrap--hide .video-player {
+        -webkit-transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
+        transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
+    }
+}
 
+@media screen and (min-width: 25em) and (min-aspect-ratio: 1280/720) {
+    .am-video-inner {
+        width: 30vh;
+        height: 30vh;
+    }
+    .video-wrap--show .am-video-inner {
+        -webkit-animation: showVideo-2 1.25s forwards;
+        animation: showVideo-2 1.25s forwards;
+    }
+    .video-player {
+        width: 100vw;
+        height: auto;
+    }
+}
 @media only screen and (max-width: 1200px) {}
 
 @media only screen and (max-width: 1122px) {
