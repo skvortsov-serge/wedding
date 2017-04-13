@@ -1,3 +1,4 @@
+@charset "UTF-8";
 has
 html {
   font-family: sans-serif;
@@ -8266,7 +8267,7 @@ header {
   background-color: #2b2b2d;
   background: url(../img/Free-Stressed-linen-patterns.jpg) center center;
   background-size: cover;
-  height: 145px;
+  height: 110px;
   border-bottom: 2px solid #fff;
   box-shadow: -5px 4px 19px -2px rgba(0, 0, 0, 0.77);
   z-index: 10;
@@ -8283,9 +8284,9 @@ header {
 
 .main-logo a img {
   position: absolute;
-  top: -20px;
+  top: -6px;
   left: 15px;
-  height: 140px;
+  height: 100px;
   width: 140px;
 }
 
@@ -8598,7 +8599,217 @@ header {
   transition: all .6s ease;
 }
 
+.response {
+  padding: 45px 70px 90px;
+  background-color: #313353;
+}
+
+.response .res-title {
+  text-align: center;
+  font-size: 3em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.response .res-subtitle {
+  position: relative;
+  text-align: center;
+  font-size: 1.3em;
+  padding-bottom: 25px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  margin-bottom: 35px;
+  color: #fff;
+}
+
+.response .res-subtitle:after {
+  content: '';
+  height: 3px;
+  width: 120px;
+  position: absolute;
+  bottom: 0;
+  background-color: #ff9b9b;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.text-wrapper {
+  display: inline-block;
+  width: 75%;
+  margin-left: 25px;
+  color: #fff;
+}
+
+.text-wrapper .res-name {
+  margin-bottom: 25px;
+  color: #ffc692;
+  text-decoration: underline;
+  font-size: 1.3em;
+}
+
+.res-img {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.res-img img {
+  width: 120px;
+  height: 120px;
+}
+
+.carousel-mod {
+  bottom: -50px;
+}
+
+.carousel-control-mod.right,
+.carousel-control-mod.left {
+  background-image: none;
+}
+
+.carousel-control .glyphicon-chevron-right {
+  right: -20%;
+}
+
+.carousel-control .glyphicon-chevron-left {
+  left: -30%;
+}
+
 .about-me {
+  position: relative;
+  background-color: #fff;
+  margin-top: -3px;
+  padding: 4rem;
+}
+
+.about-me:before {
+  position: absolute;
+  content: 'ОБО';
+  font-size: 13em;
+  left: 6%;
+  top: 78px;
+  opacity: 0.1;
+}
+
+.about-me:after {
+  position: absolute;
+  content: 'МНЕ';
+  font-size: 8.75em;
+  top: 15px;
+  right: 15%;
+  opacity: 0.1;
+}
+
+.am-wrapper {
+  max-width: 945px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.am-wrapper .am-left {
+  flex-grow: 1;
+}
+
+.am-wrapper .am-right {
+  flex-grow: 2;
+}
+
+.am-right {
+  display: flex;
+  align-items: center;
+}
+
+.am-right .am-photo {
+  position: absolute;
+  width: 48%;
+  height: 90%;
+  background: url("../img/bg-am.jpg") center center no-repeat;
+  background-size: cover;
+  box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.tagline {
+  position: absolute;
+  left: -45px;
+  bottom: -40px;
+  font-family: BebasNeue-bold;
+  font-size: 1.8em;
+  line-height: 1.5;
+  color: #ff9b9b;
+}
+
+.tagline:after {
+  content: ':)';
+  font-size: 3em;
+  line-height: .8;
+  position: absolute;
+  top: 0;
+  font-family: OpenSans-Light;
+  right: -70px;
+}
+
+.am-title h3 {
+  font-family: CaviarDreams_Bold;
+  font-size: 3em;
+  text-align: center;
+}
+
+.am-subtitle {
+  position: relative;
+  text-align: center;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  padding-bottom: 25px;
+}
+
+.am-subtitle:after {
+  content: '';
+  height: 3px;
+  width: 120px;
+  position: absolute;
+  bottom: 0;
+  background-color: #ff9b9b;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.am-list {
+  margin-top: 35px;
+}
+
+.am-list .list-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+.am-list .list-items li {
+  margin-bottom: 25px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.am-list .list-items li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-image: url(../img/sprite.png);
+  background-position: -118px -33px;
+  width: 17px;
+  height: 12px;
+}
+
+.am-list-wrapper {
+  width: 420px;
+  margin: 0 auto;
+}
+
+.intro {
   position: relative;
   min-height: 100vh;
   width: 100vw;
@@ -8611,7 +8822,7 @@ header {
   border-bottom: 3px solid #fff;
 }
 
-.about-me:before {
+.intro:before {
   background: url("../img/sky-bg.jpg") center center;
   background-size: cover;
   transform: translateZ(-1px) scale(2);
@@ -8623,27 +8834,23 @@ header {
   position: absolute;
   top: 40px;
   left: 50px;
-  z-index: 2;
+  text-align: center;
+  transform: translateZ(-2px) translateX(-460px) scale(3);
+  z-index: 1;
 }
 
 .intro-left .intro-text {
-  font-size: 40px;
   margin-left: 90px;
 }
 
-.intro-left .intro-form {
-  background-image: url("../img/form_bg.png");
-  box-sizing: border-box;
-  padding: 30px 69px 65px 106px;
-  width: 490px;
-  margin-top: 40px;
-  color: #fff;
-  text-align: center;
-  background-size: cover;
+.intro-left .intro-text h2 {
+  letter-spacing: 2px;
+  opacity: .5;
+  font-size: 4.67em;
 }
 
-.intro-left .intro-form h3 {
-  text-align: center;
+.intro-left .intro-text .lname {
+  font-family: CaviarDreams_Bold;
 }
 
 .intro-input {
@@ -8682,7 +8889,7 @@ header {
 }
 
 /*============Fullscreen Video Opening Animation=======================*/
-.am-container {
+.video-container {
   width: 100vw;
   height: 100vh;
   background: url("../img/IMG_8545.jpg") center center no-repeat;
@@ -8701,7 +8908,7 @@ header {
   align-items: center;
 }
 
-.am-video-wrapper {
+.video-wrapper {
   position: absolute;
   z-index: 1000;
   top: 0;
@@ -8715,7 +8922,7 @@ header {
   align-items: center;
 }
 
-.am-video-wrapper .am-video-inner {
+.video-wrapper .video-inner {
   position: absolute;
   overflow: hidden;
   width: 100%;
@@ -8725,7 +8932,7 @@ header {
   background: black;
 }
 
-.am-photo-stack {
+.video-photo-stack {
   width: 100%;
   margin: 4em 0;
   text-align: center;
@@ -8783,11 +8990,11 @@ header {
   transform: translate3d(0, -50%, 0);
 }
 
-.am-content {
+.video-content {
   position: relative;
 }
 
-.am-content .loader {
+.video-content .loader {
   font-size: 2.5em;
   position: absolute;
   top: 50%;
