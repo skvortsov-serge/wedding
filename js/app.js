@@ -45,10 +45,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var id = e.target.getAttribute('href');
         var element = document.querySelector(id);
         var header = document.querySelector('header');
-        var top = element.offsetTop - 100;
-        $('body,html').animate({ scrollTop: top }, 1500);
+        var top = element.offsetTop - 110;
+        $('.wrapper').animate({ scrollTop: top }, 1500);
     });
 
+    var logo = document.querySelector('.main-logo a img');
+    logo.addEventListener('click', function() {
+        $('.wrapper').animate({ scrollTop: 0 }, 1500);
+    });
 
     function success(pos) {
         var crd = pos.coords;
@@ -165,10 +169,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     /*==========fullscring vidoe opening animation========*/
 
     var bodyEl = document.body,
-        videoWrap = document.querySelector('.am-video-wrapper'),
+        videoWrap = document.querySelector('.video-wrapper'),
         videoEl = videoWrap.querySelector('video'),
         playCtrl = document.querySelector('.action--play'),
         closeCtrl = document.querySelector('.action--close');
+
+    videoEl.addEventListener('canplaythrough', allowPlay);
+    if (videoEl.readyState > 3) {
+        allowPlay();
+    }
+
 
     function init() {
         initEvents();

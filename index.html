@@ -50,8 +50,9 @@
                         <div class="t-menu hidden-xs">
                             <ul>
                                 <li><a href="#about">Обо мне</a></li>
+                                <li><a href="#video">Видео</a></li>
                                 <li><a href="#servises">Услуги</a></li>
-                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#response">Отзывы</a></li>
                                 <li><a href="#order">Заказать</a></li>
                             </ul>
                         </div>
@@ -73,7 +74,7 @@
     <div class="video-wrapper">
         <div class="video-inner">
             <!-- <iframe width="auto" height="auto" src="https://www.youtube.com/embed/bbDqwX0xMgA" frameborder="0" allowfullscreen></iframe> -->
-            <video class="video-player" src="img/Waterfall.mp4" poster="media/woods.jpg" preload="auto">
+            <video class="video-player" src="img/Waterfall.mp4" poster="media/woods.jpg" preload="metadata">
                 <source src="img/Waterfall.mp4" type="video/mp4; codecs=&quot;avc1.4D401E, mp4a.40.2&quot;">
                 <source src="media/woods.webm" type="video/webm; codecs=&quot;vp8.0, vorbis&quot;">
                 <source src="media/woods.ogg" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
@@ -86,16 +87,17 @@
         </div>
     </div>
     <div class="wrapper">
-        <section class="intro" id="about">
+        <section class="intro">
             <div class="intro-left">
                 <div class="intro-text">
                     <h2>Сергей</h2>
                     <h2 class="lname">Компаниец</h2>
+                    <div class="title-prof">Знатный скрыпач</div>
                 </div>
             </div>
             <div class="parallax-forebg"></div>
         </section>
-        <section class="about-me">
+        <section class="about-me" id="about">
             <div class="am-wrapper">
                 <div class="am-left">
                     <div class="am-title">
@@ -128,7 +130,7 @@
                 </div>
             </div>
         </section>
-        <section class="video-section">
+        <section class="video-section" id="video">
             <div class="video-container">
                 <!--                 <div class="am-title">
                     <h2>Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
@@ -230,7 +232,7 @@
                 <div class="background hidden-xs"></div>
             </div>
         </section>
-        <section class="response">
+        <section class="response" id="response">
             <div class="res-title">Отзывы</div>
             <div class="res-subtitle">Наши клиенты о нас</div>
             <div class="carousel slide" id="response-slider" data-ride="carousel">

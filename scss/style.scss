@@ -45,6 +45,9 @@ body {
     font-family: CaviarDreams, sans-serif;
 }
 
+a {
+    color: #fff;
+}
 .wrapper {
     perspective: 1px;
     height: 100%;
@@ -142,7 +145,7 @@ header {
                 a {
                     color: white;
                     &:hover {
-                        color: $page-color;
+                        // color: $page-color;
                     }
                 }
             }
@@ -162,15 +165,15 @@ header {
     width: 200px;
     height: 30px;
     font-size: 14px;
-    border: 1px solid #010925;
+    border: 1px solid #fff;
     border-radius: 20px;
     font-weight: normal;
     background-color: transparent;
     text-align: center;
     padding: 5px 10px;
     &:hover {
-        color: $page-color;
-        border-color: $page-color;
+        // color: $page-color;
+        // border-color: $page-color;
         text-decoration: none;
     }
 }
@@ -309,18 +312,19 @@ header {
     position: relative;
     border-bottom: 1px solid #fff;
     z-index: 1;
-    &:hover h2 {
-        color: #000;
-        transition: all .6s ease;
+    transition: all .3s ease;
+    &:hover .s-info h2 {
+        color: #fff;
+        transition: all .3s ease;
     }
     &:hover .background {
         opacity: 0;
-        transition: all .6s ease;
+        transition: all .3s ease;
     }
     &:hover .s-info {
         background: url('../img/sky-bg-hover.gif') center center no-repeat;
         background-size: cover;
-        transition: all .6s ease;
+        transition: all .3s ease;
     }
 }
 
@@ -335,6 +339,8 @@ header {
 .no-padding {
     padding-right: 0px;
     padding-left: 0px;
+    transition: all .3s ease;
+
 }
 
 .s-photo {
@@ -370,6 +376,7 @@ header {
     height: 200px;
     display: flex;
     align-items: center;
+    transition: all .3s ease;
     h2 {
         color: #000;
         font-size: 28px;
@@ -377,7 +384,7 @@ header {
         margin: 0;
         box-sizing: border-box;
         padding-left: 85px;
-        transition: all .6s ease;
+        transition: all .3s ease;
     }
 }
 
@@ -392,7 +399,7 @@ header {
     left: 50%;
     margin-left: -56px;
     z-index: 2;
-    transition: all .6s ease;
+    transition: all .3s ease;
 }
 
 .round2 {
@@ -422,13 +429,15 @@ header {
     top: 0;
     left: 0;
     background-color: rgba(255, 255, 255, 0.78);
-    transition: all .6s ease;
+    transition: all .3s ease;
 }
 
 //====================Response Section================//
 .response {
     padding: 45px 70px 90px;
     background-color: #313353;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
     .res-title {
         text-align: center;
         font-size: 3em;
@@ -479,16 +488,20 @@ header {
         height: 120px;
     }
 }
+
 .carousel-mod {
     bottom: -50px;
 }
+
 .carousel-control-mod.right,
 .carousel-control-mod.left {
     background-image: none;
 }
+
 .carousel-control .glyphicon-chevron-right {
     right: -20%;
 }
+
 .carousel-control .glyphicon-chevron-left {
     left: -30%;
 }
@@ -507,8 +520,8 @@ header {
         position: absolute;
         content: 'МНЕ';
         font-size: 8.75em;
-        top: 15px;
-        right: 15%;
+        top: 60%;
+        left: 36%;
         opacity: 0.1;
     }
     position: relative;
@@ -648,7 +661,7 @@ header {
 .intro-left {
     color: #000;
     position: absolute;
-    top: 40px;
+    top: -100px;
     left: 50px;
     text-align: center;
     transform: translateZ(-2px) translateX(-460px) scale(3);
@@ -662,6 +675,31 @@ header {
         }
         .lname {
             font-family: CaviarDreams_Bold;
+            margin-bottom: 40px;
+        }
+        .title-prof {
+            position: relative;
+            font-size: 2.5em;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            &:before {
+                width: 20%;
+                left: -85px;
+                content: '';
+                height: 3px;
+                background-color: #000;
+                position: absolute;
+                top: 45%;
+            }
+            &:after {
+                width: 20%;
+                right: -85px;
+                content: '';
+                height: 3px;
+                background-color: #000;
+                position: absolute;
+                top: 45%;
+            }
         }
     }
 }
@@ -680,7 +718,7 @@ header {
     margin: 20px auto;
 }
 
-#about {
+.intro {
     &:before {
         content: "";
         position: absolute;
@@ -741,11 +779,12 @@ header {
     .video-inner {
         position: absolute;
         overflow: hidden;
-        width: 100%;
-        height: 100%;
+        width: 10%;
+        height: 10%;
         margin: 0 auto;
         opacity: 0;
         background: black;
+        border: 20px solid #fff;
     }
 }
 
@@ -786,7 +825,9 @@ header {
 .video-wrap--show {
     pointer-events: auto;
     .video-inner {
-        opacity: 1;
+        opacity: 0;
+        -webkit-animation: showVideo-1 1.25s forwards;
+        animation: showVideo-1 1.25s forwards;
     }
     .action--close {
         opacity: 1;
@@ -801,8 +842,7 @@ header {
     position: absolute;
     top: 50%;
     width: 100%;
-    -webkit-transform: translate3d(0, -50%, 0);
-    transform: translate3d(0, -50%, 0);
+    transform: translate3d(-50%, -50%, 0) scale3d(1.2, 1.2, 1) rotate3d(0, 0, 1, 0deg);
 }
 
 .video-content {
@@ -884,13 +924,20 @@ header {
 }
 
 @keyframes showVideo-1 {
-    50% {
-        width: 50vw;
-        height: 50vw;
+    0% {
+        width: 40vw;
+        height: 40vw;
         opacity: 1;
-        -webkit-transform: scale3d(0.5, 0.5, 1) rotate3d(0, 0, 1, -5deg);
-        transform: scale3d(0.5, 0.5, 1) rotate3d(0, 0, 1, -5deg);
+        -webkit-transform: scale3d(0.1, 0.1, 1) rotate3d(0, 0, 1, -10deg);
+        transform: scale3d(0.1, 0.1, 1) rotate3d(0, 0, 1, -10deg);
     }
+    // 50% {
+    //     width: 50vw;
+    //     height: 50vw;
+    //     opacity: 1;
+    //     -webkit-transform: scale3d(0.3, 0.3, 1) rotate3d(0, 0, 1, -5deg);
+    //     transform: scale3d(0.3, 0.3, 1) rotate3d(0, 0, 1, -5deg);
+    // }
     100% {
         width: 100vw;
         height: 100vh;
